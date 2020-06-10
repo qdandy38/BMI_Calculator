@@ -1,0 +1,79 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Microsoft JhengHei', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.inputArea {
+    background-color: #424242;
+}
+
+.inputArea label {
+    color: #FFD366;
+    font-size: 18px;
+}
+
+.inputArea input[type='text'] {
+    background: rgba(255, 255, 255, 0.18);
+    border: 2px solid #FFD366;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.50);
+}
+
+.btnToResult,
+.showResult {
+    background-color: #FFD366;
+    font-size: 1.5rem;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.showResult {
+    position: relative;
+}
+
+.showResult:focus,
+.btnToResult:focus {
+    box-shadow: 0 0 0 0;
+}
+
+.btnToResult:hover {
+    box-shadow: 0 1px 6px 3px rgba(255, 195, 49, 0.64);
+}
+
+.btnToResult:active {
+    background: #DEA921;
+}
+
+.reStart {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 3px solid #424242;
+}
+
+.record {
+    margin-right: -15px;
+    margin-left: -15px;
+    min-height: calc(100vh - (87px + 282px));
+}
+
+.value {
+    font-size: 20px;
+    color: #4A4A4A;
+    display: flex;
+    align-items: center;
+}
+
+.value span {
+    font-size: 12px;
+    color: #424242;
+}
+
+footer {
+    background-color: #FFD366;
+    margin: 0 -15px;
+}
