@@ -131,13 +131,15 @@ function updateList(item) {
     let listColor = '';
     let len = item.length;
     for (let i = 0; i < len; i++) {
-        str += `<li class="row justify-content-around align-items-center bg-white py-3 my-3" style="border-left: 7px solid${item[i].color};">
-        <div class="col-2 value">${item[i].status}</div>
-        <div class="col-2 value"><span class="mr-2">BMI</span>${item[i].BMI}</div>
-        <div class="col-2 value"><span class="mr-2">weight</span>${item[i].weight}</div>
-        <div class="col-2 value"><span class="mr-2">height</span>${item[i].height}</div>
-        <div class="col-2 value"><span>${item[i].date}</span><a href="#" data-index="${i}" class="btn btn-light text-right ml-auto del">&times;</a></div>
-        </li>`
+        str += `
+        <li class="row justify-content-around align-items-center bg-white py-3 my-3" style="border-left: 7px solid${item[i].color};">
+            <div class="col-2 value">${item[i].status}</div>
+            <div class="col-2 value"><span class="mr-2">BMI</span>${item[i].BMI}</div>
+            <div class="col-2 value"><span class="mr-2">weight</span>${item[i].weight}</div>
+            <div class="col-2 value"><span class="mr-2">height</span>${item[i].height}</div>
+            <div class="col-2 value"><span>${item[i].date}</span><a href="#" data-index="${i}" class="btn btn-light text-right ml-auto del">&times;</a></div>
+        </li>
+        `
     }
     list.innerHTML = str;
 }
