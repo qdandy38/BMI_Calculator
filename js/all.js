@@ -1,10 +1,10 @@
 // localStorage.clear();
 //指定DOM
-let result = document.querySelector('.btnToResult'); //計算結果
-let showResult = document.querySelector('.showResult'); //呈現結果
-let statusText = document.querySelector('.statusText'); // 狀態文字
-let list = document.querySelector('.list');
-let delAll = document.querySelector('.delAll'); // 清除記錄
+const result = document.querySelector('.btnToResult'); //計算結果
+const showResult = document.querySelector('.showResult'); //呈現結果
+const statusText = document.querySelector('.statusText'); // 狀態文字
+const list = document.querySelector('.list');
+const delAll = document.querySelector('.delAll'); // 清除記錄
 let data = JSON.parse(localStorage.getItem('information')) || []; //網頁更新時先抓出localStorage的資料，如果沒有則是空陣列
 
 //監聽事件
@@ -131,13 +131,13 @@ function updateList(item) {
     let listColor = '';
     let len = item.length;
     for (let i = 0; i < len; i++) {
-        str += '<li class="row justify-content-around align-items-center bg-white py-3 my-3" style="border-left: 7px solid ' + item[i].color + ';">' +
-            '<div class="col-2 value">' + item[i].status + '</div>' +
-            '<div class="col-2 value"><span class="mr-2">BMI</span>' + item[i].BMI + '</div>' +
-            '<div class="col-2 value"><span class="mr-2">weight</span>' + item[i].weight + '</div>' +
-            '<div class="col-2 value"><span class="mr-2">height</span>' + item[i].height + '</div>' +
-            '<div class="col-2 value"><span>' + item[i].date + '</span><a href="#" data-index="' + i + '" class="btn btn-light text-right ml-auto del">&times;</a></div>' +
-            '</li>';
+        str += `<li class="row justify-content-around align-items-center bg-white py-3 my-3" style="border-left: 7px solid${item[i].color};">
+        <div class="col-2 value">${item[i].status}</div>
+        <div class="col-2 value"><span class="mr-2">BMI</span>${item[i].BMI}</div>
+        <div class="col-2 value"><span class="mr-2">weight</span>${item[i].weight}</div>
+        <div class="col-2 value"><span class="mr-2">height</span>${item[i].height}</div>
+        <div class="col-2 value"><span>${item[i].date}</span><a href="#" data-index="${i}" class="btn btn-light text-right ml-auto del">&times;</a></div>
+        </li>`
     }
     list.innerHTML = str;
 }
